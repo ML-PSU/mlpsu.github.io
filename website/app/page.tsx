@@ -2,37 +2,37 @@ import Image from "next/image";
 import Link from "next/link";
 
 const officers = [
-  { name: "Vanisha Gupta", role: "President", image: "/officers/vanisha.png" },
-  { name: "Pranav Karra", role: "Vice President", image: "/officers/pranav.png" },
-  { name: "Ian Yee", role: "Treasurer", image: "/officers/ian.png" },
-  { name: "Krishna Pagrut", role: "Technical Lead", image: "/officers/krishna.png" },
-  { name: "Manit Garg", role: "Event Planner", image: "/officers/manit.png" },
-  { name: "Pihu Agarwal", role: "Secretary", image: "/officers/pihu.png" },
+  { name: "Vanisha Gupta", role: "President", image: "/waves.gif" },
+  { name: "Pranav Karra", role: "Vice President", image: "/waves.gif" },
+  { name: "Ian Yee", role: "Treasurer", image: "/waves.gif" },
+  { name: "Krishna Pagrut", role: "Technical Lead", image: "/waves.gif" },
+  { name: "Manit Garg", role: "Event Planner", image: "/waves.gif" },
+  { name: "Pihu Agarwal", role: "Secretary", image: "/waves.gif" },
 ];
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black flex justify-center">
-      <div className="max-w-5xl w-full bg-white">
-        <nav className="bg-white shadow-md">
-          <div className="px-4">
-            <div className="flex justify-between items-center py-4">
-              <div className="flex items-center">
-                <Image
-                  src="/psu.png"
-                  alt="Penn State Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2"
-                />
-                <span className="text-xl font-bold text-gray-800">ML @ Penn State</span>
-              </div>
-              <div className="space-x-4">
-                <Link href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-                <Link href="#officers" className="text-gray-600 hover:text-blue-600 transition-colors">Officers</Link>
-                <Link href="#events" className="text-gray-600 hover:text-blue-600 transition-colors">Events</Link>
-                <Link href="#blog" className="text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-              </div>
+    <div className="min-h-screen bg-white flex justify-center py-4">
+      <div className="max-w-6xl w-full bg-white rounded-lg overflow-hidden shadow-lg">
+        <nav className="bg-black px-6 py-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center">
+              <Image
+                src="/psu.png"
+                alt="Penn State Logo"
+                width={40}
+                height={40}
+                className="mr-2"
+              />
+              <span className="text-xl font-bold text-white">ML @ Penn State</span>
+            </div>
+            <div className="flex space-x-2">
+              {/* <Link href="#about" className="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors">About</Link> */}
+              {/* <Link href="#officers" className="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors">Officers</Link> */}
+              <Link href="#events" className="px-4 py-2 bg-[#7e00fc] text-white rounded-md hover:bg-red-600 transition-colors">Events</Link>
+              <Link href="#positions" className="px-4 py-2 bg-[#7e00fc] text-white rounded-md hover:bg-red-600 transition-colors">Positions</Link>
+              {/* <Link href="#blog" className="px-4 py-2 bg-black text-white rounded-md hover:bg-gray-800 transition-colors">Blog</Link> */}
+              <Link href="https://app.youform.com/forms/euegcuxu" target="_blank" className="px-4 py-2 bg-[#7e00fc] text-white rounded-md hover:bg-red-600 transition-colors">Join Us</Link>
             </div>
           </div>
         </nav>
@@ -40,16 +40,16 @@ export default function Home() {
         <main>
           <div className="relative h-[400px]">
             <Image
-              src="/background.png"
-              alt="Background"
-              layout="fill"
-              objectFit="cover"
+              src="/waves.gif"
+              alt="Dynamic Background"
+              fill
+              style={{ objectFit: 'cover' }}
               priority
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
-                <h1 className="text-5xl font-bold mb-4">Machine Learning Club</h1>
-                <p className="text-xl mb-8">Built to make you extraordinarily productive in AI and ML.</p>
+                <h1 className="text-8xl font-bold mb-4">ML@PSU</h1>
+                <p className="text-xl mb-8">A community for real machine learning enthusiasts.</p>
                 <Link href="https://app.youform.com/forms/euegcuxu" target="_blank" className="bg-white text-gray-900 hover:bg-gray-100 font-bold py-3 px-6 rounded-full text-lg transition-colors">
                   Join Us
                 </Link>
@@ -57,7 +57,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="px-4 py-16">
+          <div className="px-6 py-16">
             <section id="about" className="mb-16">
               <h2 className="text-3xl font-bold mb-4 text-gray-800">About Us</h2>
               <p className="text-gray-600">
@@ -86,13 +86,13 @@ export default function Home() {
 
             <section id="events" className="mb-16">
               <h2 className="text-3xl font-bold mb-4 text-gray-800">Upcoming Events</h2>
-              <div className="bg-gray-100 p-4 rounded">
+              {/* <div className="bg-gray-100 p-4 rounded">
                 <h3 className="text-xl font-semibold text-gray-800">Introduction to Neural Networks Workshop</h3>
                 <p className="text-gray-600">Date: October 15, 2023 | Location: IST Building, Room 210</p>
-              </div>
+              </div> */}
             </section>
 
-            <section id="blog" className="mb-16">
+            {/* <section id="blog" className="mb-16">
               <h2 className="text-3xl font-bold mb-4 text-gray-800">Latest Blog Posts</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="bg-gray-100 p-4 rounded">
@@ -104,7 +104,7 @@ export default function Home() {
                   <p className="text-gray-600">Exploring the potential impact of AI on medical diagnosis and treatment.</p>
                 </div>
               </div>
-            </section>
+            </section> */}
           </div>
         </main>
 
