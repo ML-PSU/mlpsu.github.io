@@ -2,12 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const officers = [
-  { name: "Vanisha Gupta", role: "President", image: "/images/officers/vanisha.png" },
-  { name: "Pranav Karra", role: "Vice President", image: "/images/officers/pranav.png" },
-  { name: "Ian Yee", role: "Treasurer", image: "/images/officers/ian.png" },
-  { name: "Krishna Pagrut", role: "Technical Lead", image: "/images/officers/krishna.png" },
-  { name: "Manit Garg", role: "Event Planner", image: "/images/officers/manit.png" },
-  { name: "Pihu Agarwal", role: "Secretary", image: "/images/officers/pihu.png" },
+  { name: "Vanisha Gupta", role: "President", image: "/officers/vanisha.png" },
+  { name: "Pranav Karra", role: "Vice President", image: "/officers/pranav.png" },
+  { name: "Ian Yee", role: "Treasurer", image: "/officers/ian.png" },
+  { name: "Krishna Pagrut", role: "Technical Lead", image: "/officers/krishna.png" },
+  { name: "Manit Garg", role: "Event Planner", image: "/officers/manit.png" },
+  { name: "Pihu Agarwal", role: "Secretary", image: "/officers/pihu.png" },
 ];
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
             <div className="flex justify-between items-center py-4">
               <div className="flex items-center">
                 <Image
-                  src="/images/psu.png"
+                  src="/psu.png"
                   alt="Penn State Logo"
                   width={40}
                   height={40}
@@ -40,7 +40,7 @@ export default function Home() {
         <main>
           <div className="relative h-[400px]">
             <Image
-              src="/images/background.png"
+              src="/background.png"
               alt="Background"
               layout="fill"
               objectFit="cover"
